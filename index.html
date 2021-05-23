@@ -1,6 +1,6 @@
   
 
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html lang="en">
 
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -84,25 +84,17 @@ window.addEventListener('load', function() {
 </script>
 </head>
 <body>
-<!-- 
-<div class="loader">
-  <div class="loader-inner line-scale-pulse-out-rapid"> <img src="images/loder-logo.png"/></br> -->
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<!-- Pre Loader end -->
+
 <!-- HEADER START -->
 <header id="header" class="header">
   <div id="inner">
     <div class="col-sm-6 col-xs-6 logo"> <img src="images/logo.png" alt="" /> </div>
     <div class="col-sm-6 col-xs-6 logo_right_area">
-      <span><strong><img class="wow zoomIn" src="images/call.png" alt="alt" /> <a href="tel:+91 0000 00000">+91 81290 47838</a> </br>
-        <img class="wow zoomIn" src="images/mail.png" alt="alt" /> 
-        <a href="mailto:" style="font-size: 16px;">thiruvananthapuram@.com</a></strong> 
+      <span><strong><img class="wow zoomIn" src="images/call.png" alt="alt" /> <a href="tel:+91 0000 00000" class="color:#00467b;">+91 81290 47838</a>
+      <a href="user_registration/login.php" style="font-size: 15px;width:100px;color:#fff" class="btn btn-primary">Login</a></br>
+        <img class="wow zoomIn" src="images/mail.png" alt="alt" class="color:#00467b;"/> 
+        <a href="mailto:thiruvananthapuram@caddeskindia.com" style="font-size: 16px;color:#00467b;">thiruvananthapuram@caddeskindia.com</a></strong>
+       
 </span>
     </div>
   </div>
@@ -120,62 +112,77 @@ window.addEventListener('load', function() {
   <div class="dsu-intro">
     <div id="inner">
       <div class="col-sm-4 nopd">
-        <div class="applyBox wow zoomIn" data-wow-delay=".5s">
+        <div class="applyBox wow zoomIn" data-wow-delay=".5s" style="box-shadow: 5px 5px 5px 5px #888888;">
           <div class="dsu-form">
             <div class="frmBg">
               <small>Be a part of </small>
               <span>CAD DESK </span>
             </div>
             <div class="contact_fild">
-              <form id="formID" name="contact-form" method="post" action="#" role="form">
-                <div class="formIDfid">
+            <form method="post" action="process.php">
+            <div class="formIDfid">
                   <div class="contact-fild-box">
                     <div class="form-group">
-                        <input type="hidden" name="mydate" class="input_item" value="2021-05-11"/>
-                      <input name="name" class="form-control validate[required]" placeholder="Name" data-errormessage-value-missing="*Name is required!" type="text" />
+                  
+                  <div class="contact-fild-box">
+                    <div class="form-group">
+                    <input type="text" name="name" class="form-control" placeholder="name" >
                     </div>
                   </div>
+                 
+                 
                   <div class="contact-fild-box">
                     <div class="form-group">
-                    <input class="form-control input-lg" name="location" type="hidden" value="thiruvananthapuram@caddeskindia.com">
-                    
-                      <input name="email" class="form-control validate[required, custom[email]]" placeholder="Email" data-errormessage-value-missing="* Email is required!" type="text" />
-                    </div>
+                  <input type="text" name="location" class="form-control" placeholder="location" value="TVM" style="display:none">
                   </div>
-                  <div class="contact-fild-box">
-                    <div class="form-group">
-                      <input name="contact" id="phone" maxlength="12" placeholder="Phone" class="form-control validate[required, custom[phone]]" data-errormessage-value-missing="* Phone is required!" type="text" />
-                    </div>
                   </div>
                   
-          
-          <div class="contact-fild-box">
+                 
+                  <div class="contact-fild-box">
                     <div class="form-group">
-                      <select name="course" data-errormessage-value-missing="* Branch required!" class="form-control validate[required]">
-                        <option value=""> Select Courses</option>
+                  <input type="email" name="email" class="form-control" placeholder="email" >
+                  </div>
+                  </div>
+                 
+                  
+                  <div class="contact-fild-box">
+                    <div class="form-group">
+                  <input type="number" name="phone" class="form-control" placeholder="number" >
+                  </div>
+                  </div>
+                  
+                 
+                  <div class="contact-fild-box">
+                    <div class="form-group">
+                        <select name="course"   class="form-control validate[required]">
+                   <option value=""> Select Courses</option>
                              <option value="Civil & Arch. Cad">CIVIL & ARCHITECTURE CAD</option>
-                  <option value="Mechanical Cad"> MECHANICAL CAD</option>
+                <option value="Mechanical Cad"> MECHANICAL CAD</option>
                   <option value="Electrical & ELECTRONICS">Electrical & ELECTRONICS CAD</option>
-                  <option value="PROJECT MANAGEMENT">PROJECT MANAGEMENT</option>
-                   <option value="Interior Design"> INTERIOR DESIGN</option>
+                <option value="PROJECT MANAGEMENT">PROJECT MANAGEMENT</option>
+                    <option value="Interior Design"> INTERIOR DESIGN</option>
                       </select>
-                    </div>
+                 
+                  </div>
                   </div>
                   
-                  
+                 
                   <div class="contact-fild-box">
                     <div class="form-group">
-                      <textarea id="queryid" name="message" placeholder="Query" class="form-control ht validate[required]" data-errormessage-value-missing="* Query is required!" rows="2"></textarea>
-                    </div>
+                  <input type="text" name="message" class="form-control" placeholder="message" >
                   </div>
+                  </div>
+                 
                   <div class="contact-fild-box text-center">
                     <div class="form-group">
-                     
-                      <button type="submit" id="btnSubmit" class="btn btn_submit" name="register" onclick="return verify_mobile();">Submit</button>
+                  <input type="submit" name="save" value="submit" class="btn btn_submit" style="background-color:#ec8437">
+                      </div>
                     </div>
                   </div>
-                </div>
-              </form>
+                  </div>
+                  </div>
+                </form>
+         
             </div>
           </div>
         </div>
@@ -254,33 +261,33 @@ PAN INDIA</small></li>
                 <hr class="hr">
                 <ul class="course">
                   <li>
-                      <a href="https://caddeskindia.com/staad-pro-software"  class="btn btn_submit" id="btnSubmit">STAAD PRO</a>
+                      <a href="#"  class="btn btn_submit" id="btnSubmit">STAAD PRO</a>
                     
                   </li>
                   <li>
-                   <a href="https://caddeskindia.com/revit"  class="btn btn_submit" id="btnSubmit">Revit Architecture</a>
+                   <a href="#"  class="btn btn_submit" id="btnSubmit">Revit Architecture</a>
                  </li>
                   <li>
-                    <a href="https://caddeskindia.com/building-information-modeling-software"  class="btn btn_submit" id="btnSubmit">REVIT Structure</a>
+                    <a href="#"  class="btn btn_submit" id="btnSubmit">REVIT Structure</a>
                   </li>
                   <li>
-                     <a href="https://caddeskindia.com/google-sketch-up"  class="btn btn_submit" id="btnSubmit">GOOGLE SKETCHUP</a>
+                     <a href="#"  class="btn btn_submit" id="btnSubmit">GOOGLE SKETCHUP</a>
                  </li>
                 </ul>
 
                 <ul class="course1">
                   <li>
-                     <a href="https://caddeskindia.com/vray"  class="btn btn_submit" id="btnSubmit">VRAY</a>
+                     <a href="#"  class="btn btn_submit" id="btnSubmit">VRAY</a>
                  
                   </li>
                   <li>
-                   <a href="https://caddeskindia.com/3ds-max"  class="btn btn_submit" id="btnSubmit">3DS MAX</a>
+                   <a href="#"  class="btn btn_submit" id="btnSubmit">3DS MAX</a>
                  </li>
                   <li>
-                    <a href="https://caddeskindia.com/staad-pro-advance-software"  class="btn btn_submit" id="btnSubmit">STAAD ADV</a>
+                    <a href="#"  class="btn btn_submit" id="btnSubmit">STAAD ADV</a>
                   </li>
                   <li>
-                  <a href="https://caddeskindia.com/autocad"  class="btn btn_submit" id="btnSubmit">AUTOCAD</a>
+                  <a href="#"  class="btn btn_submit" id="btnSubmit">AUTOCAD</a>
                  </li>
                 </ul>
                 
@@ -300,31 +307,31 @@ PAN INDIA</small></li>
                 <hr class="hr">
                 <ul class="course">
                   <li>
-                    <a href="https://caddeskindia.com/mechanical-autocad-course"  class="btn btn_submit" id="btnSubmit">AUTOCAD MECHANICAL</a>
+                    <a href="#"  class="btn btn_submit" id="btnSubmit">AUTOCAD MECHANICAL</a>
                   </li>
                   <li>
-                   <a href="https://caddeskindia.com/solidworks"  class="btn btn_submit" id="btnSubmit">SOLIDWORKS</a>
+                   <a href="#"  class="btn btn_submit" id="btnSubmit">SOLIDWORKS</a>
                  </li>
                   <li>
-                    <a href="https://caddeskindia.com/catia"  class="btn btn_submit" id="btnSubmit">CATIA</a>
+                    <a href="#"  class="btn btn_submit" id="btnSubmit">CATIA</a>
                   </li>
                   <li>
-                   <a href="https://caddeskindia.com/fusion"  class="btn btn_submit" id="btnSubmit">FUSION 360</a>
+                   <a href="#"  class="btn btn_submit" id="btnSubmit">FUSION 360</a>
                  </li>
                 </ul>
 
                 <ul class="course1">
                   <li>
-                    <a href="https://caddeskindia.com/nx-cad"  class="btn btn_submit" id="btnSubmit">NX-CAD</a>
+                    <a href="#"  class="btn btn_submit" id="btnSubmit">NX-CAD</a>
                   </li>
                   <li>
-                   <a href="https://caddeskindia.com/ansys-advance"  class="btn btn_submit" id="btnSubmit">ANSYS </a>
+                   <a href="#"  class="btn btn_submit" id="btnSubmit">ANSYS </a>
                  </li>
                   <li>
-                    <a href="https://caddeskindia.com/nx-cam-software"  class="btn btn_submit" id="btnSubmit">NX CAM</a>
+                    <a href="#"  class="btn btn_submit" id="btnSubmit">NX CAM</a>
                   </li>
                   <li>
-                   <a href="https://caddeskindia.com/cnc-programming-in-jaipur"  class="btn btn_submit" id="btnSubmit">CNC </a>
+                   <a href="#"  class="btn btn_submit" id="btnSubmit">CNC </a>
                  </li>
                 </ul>
                 
@@ -340,16 +347,16 @@ PAN INDIA</small></li>
                <ul class="course">
 
                   <li>
-                    <a href="https://caddeskindia.com/autocad-electrical"  class="btn btn_submit" id="btnSubmit">AUTOCAD ELECTRICAL</a>
+                    <a href="#"  class="btn btn_submit" id="btnSubmit">AUTOCAD ELECTRICAL</a>
                   </li>
                   <li>
-                   <a href="https://caddeskindia.com/mat-lab-in-electrical"  class="btn btn_submit" id="btnSubmit">MAT LAB ELECTRICAL</a>
+                   <a href="#"  class="btn btn_submit" id="btnSubmit">MAT LAB ELECTRICAL</a>
                  </li>
                   <li>
-                    <a href="https://caddeskindia.com/plc-in-electrical"  class="btn btn_submit" id="btnSubmit">PLC ELECTRICAL</a>
+                    <a href="#"  class="btn btn_submit" id="btnSubmit">PLC ELECTRICAL</a>
                   </li>
                   <li>
-                   <a href="https://caddeskindia.com/scada-in-electrical"  class="btn btn_submit" id="btnSubmit">SCADA ELECTRICAL
+                   <a href="#"  class="btn btn_submit" id="btnSubmit">SCADA ELECTRICAL
 </a>
                  </li>
                 </ul>
@@ -369,22 +376,21 @@ PAN INDIA</small></li>
     <div class="highlight-collum">
       <div class="col-sm-6 col-xs-12 col-md-offset-6 highlight-item">
         <div class="widget-title" style="text-align: left;">
-          <h3 class="wow fadeInUp" data-wow-delay="0.1s"><b>CAD DESK</b> Highlights</h3>
+          <h5 class="wow fadeInUp" data-wow-delay="0.1s"><b>CAD DESK</b> Highlights</h5>
         </div>
         <ul>
-          <li class="wow fadeInUp" data-wow-delay="0.2s"> <h1>caddesk trivandrum offered courses in civil autocad, staad pro,vray,revit architecture,3ds max,revit structure,staad adv,google sketchup. </h1>
-            <h2>
+          <li class="wow fadeInUp" data-wow-delay="0.2s"> caddesk trivandrum offered courses in civil autocad, staad pro,vray,revit architecture,3ds max,revit structure,staad adv,google sketchup.
+           
               caddesk trivandrum offered courses in mechanical autocad, ansys,nx-cad ,nx cam,cnc,solidworks,catia,fusion 360.
-            </h2>
-            <h2>
-              caddesk trivandrum offered courses in Electrical autocad electrical, mat lab electrical,plc electrical,scada electrical.<h2> <b><a href="https://caddeskindia.com/" target="_blank">know more</a></b></li>
+            
+              caddesk trivandrum offered courses in Electrical autocad electrical, mat lab electrical,plc electrical,scada electrical.<h6> <b><a href="#" target="_blank">know more</a></b></li>
           
-          <li class="wow fadeInUp" data-wow-delay="0.4s">Caddesk network has grown to more than 170+ cities in 22 states of india. <b><a href="https://caddeskindia.com/" target="_blank">know more</a></b>
+          <li class="wow fadeInUp" data-wow-delay="0.4s">Caddesk network has grown to more than 170+ cities in 22 states of india. <b><a href="#" target="_blank">know more</a></b>
           </li>
-          <li class="wow fadeInUp" data-wow-delay="0.5s">Caddesk trivandrum 20 years vast experience in training field online and offline training, on demand we provide online training for students. <b><a href="https://caddeskindia.com/online-training" target="_blank">know more</a></b></li>
-          <li class="wow fadeInUp" data-wow-delay="0.6s">Cad desk  trained more than 2 lac+ students and professionals from colleges and corporates over the years to make them job ready. <b><a href="https://caddeskindia.com/" target="_blank">know more</a></b></li>
+          <li class="wow fadeInUp" data-wow-delay="0.5s">Caddesk trivandrum 20 years vast experience in training field online and offline training, on demand we provide online training for students. <b><a href="#" target="_blank">know more</a></b></li>
+          <li class="wow fadeInUp" data-wow-delay="0.6s">Cad desk  trained more than 2 lac+ students and professionals from colleges and corporates over the years to make them job ready. <b><a href="" target="_blank">know more</a></b></li>
 
-          <li class="wow fadeInUp" data-wow-delay="0.3s">Air-conditioned class rooms and conference halls create an ideal learning environment <b><a href="https://caddeskindia.com/" target="_blank">know more</a></b></li>
+          <li class="wow fadeInUp" data-wow-delay="0.3s">Air-conditioned class rooms and conference halls create an ideal learning environment <b><a href="#" target="_blank">know more</a></b></li>
         </ul>
       </div>
     </div>
@@ -394,21 +400,21 @@ PAN INDIA</small></li>
   <div id="inner">
   <div class="sec2Head gradient">
     <div class="widget-title black">
-      <h3 class="wow fadeInUp" data-wow-delay="0.1s">CAD DESK  CERTIFICATE FOR STUDENTS</h3>
+      <h3 class="wow fadeInUp" data-wow-delay="0.1s">CADDESK  COURSES FOR STUDENTS</h3>
     </div>
     <div class="speclization_block">
       <div class="partnerships-slider-row">
         <div class="owl-carousel owl-theme" id="partnerships-slider">
-          <div class="text-center wow zoomIn"> <img src="images/1.png" alt="alt" /></div>
-          <div class="text-center wow zoomIn"> <img src="images/2.png" alt="alt" /></div>
-          <div class="text-center wow zoomIn"> <img src="images/3.png" alt="alt" /></div>
-          <div class="text-center wow zoomIn"> <img src="images/4.png" alt="alt" /></div>
-          <div class="text-center wow zoomIn"> <img src="images/5.png" alt="alt" /></div>
-          <div class="text-center wow zoomIn"> <img src="images/6.png" alt="alt" /></div>
-          <div class="text-center wow zoomIn"> <img src="images/7.png" alt="alt" /></div>
-          <div class="text-center wow zoomIn"> <img src="images/5.png" alt="alt" /></div>
-          <div class="text-center wow zoomIn"> <img src="images/2.png" alt="alt" /></div>
-          <div class="text-center wow zoomIn"> <img src="images/1.png" alt="alt" /></div>
+          <div class="text-center wow zoomIn"> <img src="images1/1.jpeg" alt="alt" /></div>
+          <div class="text-center wow zoomIn"> <img src="images1/2.jpeg" alt="alt" /></div>
+          <div class="text-center wow zoomIn"> <img src="images1/3.jpeg" alt="alt" /></div>
+          <div class="text-center wow zoomIn"> <img src="images1/4.jpeg" alt="alt" /></div>
+          <div class="text-center wow zoomIn"> <img src="images1/5.jpeg" alt="alt" /></div>
+          <div class="text-center wow zoomIn"> <img src="images1/6.jpeg" alt="alt" /></div>
+          <div class="text-center wow zoomIn"> <img src="images1/7.jpeg" alt="alt" /></div>
+          <div class="text-center wow zoomIn"> <img src="images1/8.jpeg" alt="alt" /></div>
+          <div class="text-center wow zoomIn"> <img src="images1/9.jpeg" alt="alt" /></div>
+          <div class="text-center wow zoomIn"> <img src="images1/4.jpeg" alt="alt" /></div>
           
           
         </div>
@@ -418,7 +424,7 @@ PAN INDIA</small></li>
 </section>
 
 <!-- sec3 START -->
-<section class="sec3">
+<section class="sec3" style="margin-top:5%;">
   <div id="inner">
     <div class="widget-title">
       <h3 class="wow fadeInUp" data-wow-delay="0.1s">Placement record</h3>
@@ -427,39 +433,26 @@ PAN INDIA</small></li>
       <div class="record-content"> 
         <strong class="wow fadeInUp" data-wow-delay="0.1s">210000+ Students Placed</strong> 
         <div class="record-block">
-          <div class="col-sm-3 col-xs-6 record-item wow fadeInLeft" data-wow-delay="0.1s"> <img src="images/record-logo1.png" alt=""/>
-          
+          <div class="col-sm-3 col-xs-6 record-item wow fadeInLeft" data-wow-delay="0.1s"> <img src="images/logo/watermate.png" alt=""style="box-shadow: 5px 5px 5px 5px #888888;"/>
           </div>
-          <div class="col-sm-3 col-xs-6 record-item wow fadeInLeft" data-wow-delay="0.2s"> <img src="images/record-logo2.png" alt=""/>
+          <div class="col-sm-3 col-xs-6 record-item wow fadeInLeft" data-wow-delay="0.2s"> <img src="images/logo/shri.png" alt="" style="box-shadow: 5px 5px 5px 5px #888888;"/>
            
           </div>
-          <div class="col-sm-3 col-xs-6 record-item wow fadeInLeft" data-wow-delay="0.3s"> <img src="images/record-logo3.png" alt=""/>
+          <div class="col-sm-3 col-xs-6 record-item wow fadeInLeft" data-wow-delay="0.3s"> <img src="images/logo/jeet.png" alt="" style="box-shadow: 5px 5px 5px 5px #888888;"/>
            
           </div>
-          <div class="col-sm-3 col-xs-6 record-item wow fadeInLeft" data-wow-delay="0.4s"> <img src="images/record-logo4.png" alt=""/>
+          <div class="col-sm-3 col-xs-6 record-item wow fadeInLeft" data-wow-delay="0.4s"> <img src="images/logo/mahima.png" alt="" style="box-shadow: 5px 5px 5px 5px #888888;"/>
             
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-xs-12 about-left">
-       <div class="placement-btm wow fadeInUp  text-center" style="visibility: visible;animation-name: fadeInUp;background: linear-gradient(to right, #44733f 0%,#9bb52c 50%,#e3eb1c 100%);padding: 16%;">
-         <h2>CAD DESK TRIVANDRUM</h2>
-
-
-          <p style="text-align: -webkit-left;"> <img class="wow zoomIn" src="images/home.png" alt="alt" /> CAD DESK TRIVANDRUM,  KAZHAKOOTAM,  SOUNDARYA TOWER, NEAR POST OFFICE, KAZHAKOOTAM ,THIRUVANANTHAPURAM, KERALA -695582</p>
-          <p style="text-align: -webkit-left;"> <img class="wow zoomIn" src="images/call.png" alt="alt" />+91-81290 47838</p>
-          <p style="text-align: -webkit-left;"> <img class="wow zoomIn" src="images/mail.png" alt="alt" /> thiruvananthapuram@caddeskindia.com</p>
-        </div>
-      </div>
-      <div class="col-sm-6 col-xs-12 about-rigth">
-        <div class="placement-btm text-center wow fadeInUp" data-wow-delay="0.2s"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15784.253303946463!2d76.9511374!3d8.4932241!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9dacfdbc46da1428!2sCAD+DESK!5e0!3m2!1sen!2sin!4v1562665341161!5m2!1sen!2sin" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></div>
-      </div>
-    </div>
   </div>
 </section>
 
+
+
 <!-- sec4 START -->
-<section class="sec4">
+<section class="sec4" style="margin-top:5%;">
   <div id="inner">
     <div class="sec4Head gradient">
       <div class="widget-title black">
@@ -482,6 +475,8 @@ PAN INDIA</small></li>
   </div>
 </section>
 
+
+
 <!-- sec6 START -->
 <section class="sec6 wow fadeIn">
   <div id="inner">
@@ -491,50 +486,66 @@ PAN INDIA</small></li>
           <h3 class="wow fadeInUp">Alumni Speak</h3>
         </div>
         <div class="owl-carousel owl-theme" id="student-speak">
+        
+        <div class="student_item">
+           
+           <div class="photo"> <img src="images1/student/student.jpg" style="border-radius:20px;width:100px;"/>
+             <h2>Anu Antony</h2>
+             <p>Student</p>
+             <div class="student_text " style="margin-top:50px;">
+             <p>“Class was effective. The Teaching methods was excellent and very useful. I highly recommend this”</p>
+           </div>
+           </div>
+         </div>
           <div class="student_item">
-            <div class="student_text">
-              <p>“Cad desk is a very good institute for the student to get knowledge of design software. Cad desk provide placement and recently I have done my auto cad and I have been placed in IL &amp; FS ENVIROMENTAL INFASTRUCTUTE &amp; service LTD. My autocad teacher Mr. Sumant is a very good teacher for the autocad he know about the autocad  very well. My date of joining  19/11/18. Recently I have start the stadd pro and in the guidance of Mr. Sachin goyal he is a very good teacher of the stand pro. ”</p>
+          
+            <div class="photo"> <img src="images1/student/student.jpg" style="border-radius:20px;width:100px;"/>
+              <h2>Akhil Murugan</h2>
+              <p>Student</p>
+              <div class="student_text " style="margin-top:50px;">
+              <p>“My all over experience is very good.Classes was excellent with good interaction.Thank you very much for all the inside I could learn in this course.it is very useful for my job”</p>
             </div>
-            <div class="photo"> <img src="images/ekta.png"/>
-              <h2>Ms.LAVINA YOGI</h2>
-              <p>Course : AutoCAD, 3ds Max, Revit Architecture </p>
             </div>
           </div>
           <div class="student_item">
-            <div class="student_text">
-              <p>“its a very  excellent experience with caddesk. the faculty members of this choching is very helpfully nature. my trainer Mr Sumanth sir is very helpful for me. Mrs Geetika mam she is really a nice receptionist and his nature very lovely.”</p>
+           
+            <div class="photo"> <img src="images1/student/student.jpg" style="border-radius:20px;width:100px;"/>
+              <h2>Vaishnavi MS</h2>
+              <p>Student</p>
+              <div class="student_text " style="margin-top:50px;">
+              <p>“Good experience and effective sessions. Good and useful or every civil engineers”</p>
             </div>
-            <div class="photo"> <img src="images/ektasharma.png"/>
-              <h2>Ms. EKTA SHARMA</h2>
-              <p>Software : Sketch Up</p>
             </div>
           </div>
           <div class="student_item">
-            <div class="student_text">
-              <p>“It was really great to be there as learning became easy. Proper guidance was given from the beginning about the course. Faculty was really helpful and supportive in class as well as in lab. Placements are the only thing which worries a little bit other than that i would definitely recommend this institute for better understanding and learning.”</p>
+           
+            <div class="photo"> <img src="images1/student/student.jpg" style="border-radius:20px;width:100px;"/>
+              <h2>Akash</h2>
+              <p>Student</p>
+              <div class="student_text " style="margin-top:50px;">
+              <p>“Fabulous lab facilities and supportive staffs.Interaction to students by staffs are polite teching method and clearence is satisfying”</p>
             </div>
-            <div class="photo"> <img src="images/rohit.png"/>
-              <h2>Mr. ROHIT SAXENA</h2>
-              <p>Software :AutoCAD, 3ds Max, Revit Architecture (Master Diploma)</p>
             </div>
           </div>
          
           <div class="student_item">
-            <div class="student_text">
-              <p>“My dream career is to work as a scientist and to work for the mankind by dealing with the health problems via new findings.”</p>
+            
+            <div class="photo"><img src="images1/student/student.jpg" style="border-radius:20px;width:100px;"/>
+              <h2>Gokul Sankar S</h2>
+              <p>Student</p>
+              <div class="student_text " style="margin-top:50px;">
+              <p>“It was really wonderfull experience very effective class and high quality labs and classrooms professionally trained teachers and staff greats support from everyone.”</p>
             </div>
-            <div class="photo"> <img src="images/suresh.png"/>
-              <h2>Mr. SURESH SHARMA</h2>
-              <p>Software: AutoCAD</p>
             </div>
           </div>
           <div class="student_item">
-            <div class="student_text">
-              <p>“its a very  excellent experience with caddesk. the faculty members of this choching is very helpfully nature. my trainer Mr Sumanth sir is very helpful for me. Mrs Geetika mam she is really a nice receptionist and his nature very lovely. ”</p>
+           
+          <div class="photo"> <img src="images1/student/student.jpg" style="border-radius:20px;width:100px;"/>
+              <h2>Akash</h2>
+              <p>Student</p>
+              <div class="student_text " style="margin-top:50px;">
+              <p>“Fabulous lab facilities and supportive staffs.Interaction to students by staffs are polite teching method and clearence is satisfying”</p>
             </div>
-            <div class="photo"> <img src="images/lokeshsharma.png"/>
-              <h2>Ms. LOKESH SHARMA</h2>
-              <p>Software: AutoCAD</p>
             </div>
           </div>
           
@@ -544,6 +555,55 @@ PAN INDIA</small></li>
     </div>
   </div>
 </section>
+
+<section class="sec3">
+  <div id="inner">
+      <div class="widget-title">
+      </div>
+       <div class="sec3Head">
+          <div class="record-content"> 
+            <div class="col-sm-12 col-xs-12 about-left">
+                <div class="placement-btm wow fadeInUp  text-center" >
+                  <video controls=" " width="560" height="315">
+                    <source src="dff9f8eb4f3defa0f83cb61d993b1e84.mp4"  type="video/mp4">
+                  </video>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+</section>
+
+<!-- contact start -->
+
+<!-- sec3 START -->
+<section class="sec3">
+  <div id="inner">
+    <div class="widget-title">
+      <h3 class="wow fadeInUp" data-wow-delay="0.1s">Contact Us</h3>
+    </div>
+    <div class="sec3Head">
+      <div class="col-sm-6 col-xs-12 about-left">
+       <div class="placement-btm wow fadeInUp  text-center" style="visibility: visible;animation-name: fadeInUp;background: linear-gradient(to right, #00467b 0%,#00467b 50%,#00467b 100%);padding: 16%;">
+         <h2 style="color:#fff">CAD DESK TRIVANDRUM</h2>
+
+
+          <p style="text-align: -webkit-left;color:#fff;"> <img class="wow zoomIn" src="images/home.png" alt="alt" /> CAD DESK TRIVANDRUM,  KAZHAKOOTAM,  SOUNDARYA TOWER, NEAR POST OFFICE, KAZHAKOOTAM ,THIRUVANANTHAPURAM, KERALA -695582</p>
+          <p style="text-align: -webkit-left;color:#fff;"> <img class="wow zoomIn" src="images/call.png" alt="alt" />+91-81290 47838</p>
+          <p style="text-align: -webkit-left;color:#fff;"> <img class="wow zoomIn" src="images/mail.png" alt="alt" /> thiruvananthapuram@caddeskindia.com</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xs-12 about-rigth">
+        <div class="placement-btm text-center wow fadeInUp" data-wow-delay="0.2s">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15784.253303946463!2d76.9511374!3d8.4932241!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9dacfdbc46da1428!2sCAD+DESK!5e0!3m2!1sen!2sin!4v1562665341161!5m2!1sen!2sin" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- contact end -->
+
+
 <footer class="footer">
   <div id="inner">
     <div class=""> Copyright © 2019, CAD DESK , All Rights Reserved. </div>
@@ -593,3 +653,4 @@ fit: true
 
 
 </html>
+
